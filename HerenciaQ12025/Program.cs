@@ -78,11 +78,34 @@ switch (opcion)
         Console.WriteLine("Escriba la Familia:");
         invertebrado.Familia = Console.ReadLine();
 
+        Console.WriteLine("Tipo de animal invertebrado:");
+        invertebrado.Tipo = Console.ReadLine();
+
+        Console.WriteLine("Tiene Patas? (s/n):");
+        tienePatas = Console.ReadLine();
+        if (tienePatas.ToLower() == "s")
+        {
+            invertebrado.TienePatas = true;
+
+            Console.WriteLine("Numero de patas");
+            invertebrado.NumeroPatas=Convert.ToInt32(Console.ReadLine());
+
+        }
+
+
+        Console.WriteLine("Tiene Concha? (s/n):");
+        tieneConcha = Console.ReadLine();
+        
+        if (tieneConcha.ToLower() == "s")
+        {
+            invertebrado.TieneConcha = true;
+        }
+
+
+        invertebrado.Imprimir();
+
+
         break;
-
-
-
-
 
 
     default:
